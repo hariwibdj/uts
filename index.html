@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light justify-content-end"
+    >
+      <div class="container">
+        <div class="logo">
+          <a class="navbar-brand" href="#">My App</a>
+        </div>
+      </div>
+      <div class="container">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>Operasi Matematika dengan JavaScript</h1>
+      <form>
+        <div class="mb-3">
+          <label for="number1" class="form-label">Angka Pertama</label>
+          <input type="number" class="form-control" id="number1" />
+        </div>
+        <div class="mb-3">
+          <label for="number2" class="form-label">Angka Kedua</label>
+          <input type="number" class="form-control" id="number2" />
+        </div>
+        <div class="mb-3">
+          <label for="operation" class="form-label">Operasi</label>
+          <select class="form-select" id="operation">
+            <option value="add">Penjumlahan</option>
+            <option value="subtract">Pengurangan</option>
+            <option value="multiply">Perkalian</option>
+            <option value="divide">Pembagian</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="calculate()">
+          Hitung
+        </button>
+      </form>
+    </div>
+    <script>
+      function calculate() {
+        const number1 = parseFloat(document.getElementById("number1").value);
+        const number2 = parseFloat(document.getElementById("number2").value);
+        const operation = document.getElementById("operation").value;
+        let result;
+
+        switch (operation) {
+          case "add":
+            result = number1 + number2;
+            break;
+          case "subtract":
+            result = number1 - number2;
+            break;
+          case "multiply":
+            result = number1 * number2;
+            break;
+          case "divide":
+            if (number2 !== 0) {
+              result = number1 / number2;
+            } else {
+              alert("Tidak bisa membagi dengan nol!");
+              return;
+            }
+            break;
+          default:
+            alert("Operasi tidak valid!");
+            return;
+        }
+
+        alert(`Hasil: ${result}`);
+      }
+    </script>
+  </body>
+</html>
