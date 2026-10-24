@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container">
         <div class="logo">
-          <a class="navbar-brand" href="#">My App</a>
+          <a class="navbar-brand" href="#">My App UTS</a>
         </div>
       </div>
       <div class="container justify-content-end">
@@ -32,30 +32,34 @@
         </ul>
       </div>
     </nav>
-    <main class="container flex-grow-1">
-      <h1>Operasi Matematika dengan JavaScript</h1>
-      <form>
-        <div class="mb-3">
-          <label for="number1" class="form-label">Angka Pertama</label>
-          <input type="number" class="form-control" id="number1" />
-        </div>
-        <div class="mb-3">
-          <label for="number2" class="form-label">Angka Kedua</label>
-          <input type="number" class="form-control" id="number2" />
-        </div>
-        <div class="mb-3">
-          <label for="operation" class="form-label">Operasi</label>
-          <select class="form-select" id="operation">
-            <option value="add">Penjumlahan</option>
-            <option value="subtract">Pengurangan</option>
-            <option value="multiply">Perkalian</option>
-            <option value="divide">Pembagian</option>
-          </select>
-        </div>
-        <button type="button" class="btn btn-primary" onclick="calculate()">
-          Hitung
-        </button>
-      </form>
+    <main
+      class="container flex-grow-1 d-flex align-items-center justify-content-center"
+    >
+      <div class="w-100" style="max-width: 720px">
+        <h1>Operasi Matematika dengan JavaScript</h1>
+        <form>
+          <div class="mb-3">
+            <label for="number1" class="form-label">Angka Pertama</label>
+            <input type="number" class="form-control" id="number1" />
+          </div>
+          <div class="mb-3">
+            <label for="number2" class="form-label">Angka Kedua</label>
+            <input type="number" class="form-control" id="number2" />
+          </div>
+          <div class="mb-3">
+            <label for="operation" class="form-label">Operasi</label>
+            <select class="form-select" id="operation">
+              <option value="add">Penjumlahan</option>
+              <option value="subtract">Pengurangan</option>
+              <option value="multiply">Perkalian</option>
+              <option value="divide">Pembagian</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="calculate()">
+            Hitung
+          </button>
+        </form>
+      </div>
     </main>
     <footer class="bg-primary text-white text-center py-3 mt-auto">
       <div class="container">
